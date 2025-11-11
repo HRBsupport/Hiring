@@ -110,3 +110,47 @@
           OneDev Team
         </a>
       </p>
+    </footer>
+  </div>
+
+  <!-- Modal Form -->
+  <div class="overlay">
+    <div class="modal">
+      <h3>Formulir Lamaran Kerja</h3>
+      <form>
+        <div class="form-row">
+          <div class="field">
+            <label>Nama Lengkap</label>
+            <input type="text" name="name" placeholder="Nama Anda" required />
+          </div>
+          <div class="field">
+            <label>Email</label>
+            <input type="email" name="email" placeholder="email@contoh.com" required />
+          </div>
+        </div>
+        <div class="form-row">
+          <div class="field">
+            <label>Posisi</label>
+            <select name="role" required>
+              <option value="">Pilih posisi</option>
+              <option value="Frontend Developer">Frontend Developer</option>
+              <option value="Backend Engineer">Backend Engineer</option>
+              <option value="UI/UX Designer">UI/UX Designer</option>
+            </select>
+          </div>
+        </div>
+        <div class="field">
+          <label>Pesan atau Deskripsi Singkat</label>
+          <textarea name="message" placeholder="Ceritakan sedikit tentang diri Anda..." required></textarea>
+        </div>
+        <div class="form-row">
+          <button type="submit" class="btn">Kirim Lamaran</button>
+          <button type="button" class="btn ghost btn-close">Batal</button>
+        </div>
+      </form>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
