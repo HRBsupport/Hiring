@@ -1,231 +1,56 @@
-/* ========== GLOBAL ========== */
-body {
-  margin: 0;
-  font-family: 'Poppins', sans-serif;
-  background-color: #0a0f1c;
-  color: #fff;
-  overflow-x: hidden;
-}
+/* ======== LAYOUT PERBAIKAN ======== */
 
-a {
-  color: inherit;
-  text-decoration: none;
-}
-
-h1, h2, h3, p {
-  margin: 0;
-}
-
-/* ========== HEADER ========== */
-header {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  background: #11182c;
-  padding: 16px 32px;
-  position: sticky;
-  top: 0;
-  z-index: 1002;
-}
-
-.logo {
-  font-size: 1.6rem;
-  font-weight: 700;
-  color: #7c3aed;
-  letter-spacing: 1px;
-}
-
-.nav-links a {
-  margin: 0 12px;
-  font-weight: 500;
-  color: #fff;
-  transition: color 0.3s ease;
-}
-
-.nav-links a:hover {
-  color: #7c3aed;
-}
-
-.menu-btn {
-  display: none;
-  background: none;
-  border: none;
-  color: #fff;
-  font-size: 1.8rem;
-  cursor: pointer;
-}
-
-/* ========== SIDEBAR ========== */
-.sidebar {
-  position: fixed;
-  top: 0;
-  left: -270px;
-  width: 250px;
-  height: 100%;
-  background: #11182c;
-  transition: left 0.3s ease;
-  z-index: 1001;
-  padding: 40px 20px;
-  box-shadow: 2px 0 10px rgba(0, 0, 0, 0.5);
-}
-.sidebar.active {
-  left: 0;
-}
-.sidebar a {
-  display: block;
-  padding: 14px 0;
-  text-decoration: none;
-  color: #fff;
-  font-weight: 500;
-  transition: color 0.3s;
-}
-.sidebar a:hover {
-  color: #7c3aed;
-}
-.close-btn {
-  position: absolute;
-  right: 20px;
-  top: 10px;
-  background: none;
-  border: none;
-  font-size: 1.6rem;
-  color: #fff;
-  cursor: pointer;
-}
-
-/* Overlay ketika sidebar aktif */
-.overlay {
-  display: none;
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background: rgba(0, 0, 0, 0.6);
-  z-index: 1000;
-  transition: opacity 0.3s ease;
-}
-.overlay.active {
-  display: block;
-}
-
-/* ========== RESPONSIVE HEADER ========== */
-@media (max-width: 768px) {
-  .nav-links {
-    display: none;
-  }
-  .menu-btn {
-    display: block;
-  }
-}
-
-/* ========== HERO SECTION ========== */
-.hero {
-  height: 80vh;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  background: linear-gradient(135deg, #1e1b4b, #0f172a);
-  text-align: center;
-  padding: 0 20px;
-}
-.hero-content {
-  max-width: 700px;
-}
-.hero h1 {
-  font-size: 3rem;
-  margin-bottom: 20px;
-}
-.hero p {
-  font-size: 1.1rem;
-  color: #ccc;
-  margin-bottom: 30px;
-}
-.btn {
-  display: inline-block;
-  padding: 12px 24px;
-  background: #7c3aed;
-  color: #fff;
-  border-radius: 8px;
-  text-decoration: none;
-  font-weight: 600;
-  transition: background 0.3s ease;
-}
-.btn:hover {
-  background: #6d28d9;
-}
-
-/* ========== MAIN CONTENT ========== */
-.content {
-  max-width: 1000px;
-  margin: 40px auto;
-  padding: 20px;
-}
-.content h2 {
-  text-align: center;
-  font-size: 2rem;
-  margin-bottom: 30px;
-}
-
-/* ========== JOB CARDS ========== */
-.job-list {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-  gap: 24px;
-  margin: 20px;
-}
-.job-card {
-  background: #1a1f3c;
-  border-radius: 12px;
-  padding: 24px;
-  text-align: center;
-  transition: all 0.3s ease;
-}
-.job-card:hover {
-  background: #23284f;
-  transform: translateY(-5px);
-}
-.job-card h3 {
-  color: #7c3aed;
-  margin-bottom: 10px;
-}
-
-/* ========== FORM KONTAK ========== */
-.contact-form {
-  max-width: 500px;
-  margin: 0 auto;
+/* Agar konten tidak tertutup header */
+main {
+  padding-top: 100px; /* tinggi header */
+  padding-bottom: 80px; /* ruang untuk footer */
+  min-height: calc(100vh - 160px);
   display: flex;
   flex-direction: column;
-  gap: 16px;
-}
-.contact-form input,
-.contact-form textarea {
-  width: 100%;
-  padding: 12px;
-  border-radius: 8px;
-  border: none;
-  outline: none;
-  background: #1a1f3c;
-  color: #fff;
-  font-size: 1rem;
-}
-.contact-form input::placeholder,
-.contact-form textarea::placeholder {
-  color: #aaa;
+  align-items: center;
+  justify-content: center;
 }
 
-/* ========== FOOTER ========== */
-footer {
-  background: #0c1224;
+/* Untuk halaman dengan banyak isi (seperti karir) */
+.content {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 40px 20px;
   text-align: center;
+}
+
+/* Grid konten agar sejajar dan responsif */
+.grid-center {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 24px;
+  width: 100%;
+  justify-items: center;
+}
+
+/* Pastikan sidebar overlay tidak menekan elemen lain */
+body.sidebar-active main,
+body.sidebar-active header,
+body.sidebar-active footer {
+  pointer-events: none; /* Tidak bisa diklik saat sidebar aktif */
+  user-select: none;
+  filter: blur(2px);
+  transition: filter 0.3s ease;
+}
+
+/* Pastikan hero dan konten tengah sejajar */
+.hero,
+.content {
+  text-align: center;
+}
+.hero-content {
   padding: 20px;
-  font-size: 0.9rem;
-  border-top: 1px solid rgba(255,255,255,0.1);
 }
-footer a {
-  color: #7c3aed;
-  text-decoration: none;
-}
-footer a:hover {
-  text-decoration: underline;
+
+/* Footer tidak menutupi isi */
+footer {
+  position: relative;
+  bottom: 0;
+  width: 100%;
+  z-index: 999;
 }
