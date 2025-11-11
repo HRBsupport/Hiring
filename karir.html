@@ -5,6 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Karir - OneDev</title>
   <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="karir.css">
 </head>
 <body>
   <header id="header"></header>
@@ -16,23 +17,39 @@
       <div class="job-card">
         <h3>Frontend Developer</h3>
         <p>Membangun UI dengan React/Tailwind.</p>
-        <button class="btn">Lamar Sekarang</button>
+        <button class="btn apply-btn" data-job="Frontend Developer">Lamar Sekarang</button>
       </div>
       <div class="job-card">
         <h3>Backend Engineer</h3>
         <p>Membangun API cepat & aman dengan Node.js.</p>
-        <button class="btn">Lamar Sekarang</button>
+        <button class="btn apply-btn" data-job="Backend Engineer">Lamar Sekarang</button>
       </div>
       <div class="job-card">
         <h3>UI/UX Designer</h3>
         <p>Mendesain pengalaman pengguna yang menarik.</p>
-        <button class="btn">Lamar Sekarang</button>
+        <button class="btn apply-btn" data-job="UI/UX Designer">Lamar Sekarang</button>
       </div>
     </div>
   </main>
 
+  <!-- Popup Form -->
+  <div class="popup-overlay" id="popupOverlay">
+    <div class="popup-form">
+      <h3>Formulir Lamaran</h3>
+      <form id="applyForm">
+        <input type="text" id="name" placeholder="Nama Lengkap" required>
+        <input type="email" id="email" placeholder="Email" required>
+        <input type="text" id="position" placeholder="Posisi" readonly>
+        <textarea id="message" placeholder="Deskripsi singkat tentang diri Anda" required></textarea>
+        <button type="submit" class="btn">Kirim Lamaran</button>
+        <button type="button" class="btn cancel-btn" id="closePopup">Batal</button>
+      </form>
+    </div>
+  </div>
+
   <footer id="footer"></footer>
 
   <script src="script.js"></script>
+  <script src="karir.js"></script>
 </body>
 </html>
