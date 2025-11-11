@@ -1,0 +1,81 @@
+/* =========================================================
+   🌐 OneDev Maintenance Overlay
+   Designed by OneDev — https://onedevofficial.vercel.app
+   ========================================================= */
+
+#maintenance-overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(10, 15, 30, 0.96);
+  backdrop-filter: blur(8px);
+  color: #e2e8f0;
+  z-index: 999999;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  text-align: center;
+  font-family: "Poppins", sans-serif;
+  animation: fadeIn 0.5s ease;
+}
+
+#maintenance-overlay.hidden {
+  display: none;
+}
+
+#maintenance-overlay h1 {
+  font-size: 2rem;
+  color: #38bdf8;
+  margin-bottom: 10px;
+}
+
+#maintenance-overlay p {
+  color: #94a3b8;
+  margin-bottom: 25px;
+  font-size: 1rem;
+  max-width: 500px;
+}
+
+.countdown {
+  display: flex;
+  gap: 20px;
+  margin-bottom: 25px;
+}
+
+.countdown div {
+  background: #1e293b;
+  padding: 15px 20px;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.3);
+}
+
+.countdown span {
+  display: block;
+  font-size: 1.8rem;
+  font-weight: 700;
+  color: #38bdf8;
+}
+
+.countdown label {
+  font-size: 0.8rem;
+  color: #94a3b8;
+}
+
+#maintenance-overlay a {
+  background: #38bdf8;
+  color: #0f172a;
+  padding: 12px 28px;
+  border-radius: 8px;
+  text-decoration: none;
+  font-weight: 600;
+  transition: 0.3s;
+}
+
+#maintenance-overlay a:hover {
+  background: #0ea5e9;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
