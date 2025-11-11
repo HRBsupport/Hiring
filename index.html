@@ -3,153 +3,22 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>OneDev Hiring</title>
+  <title>OneDev Hiring - Selamat Datang</title>
   <link rel="stylesheet" href="styles.css" />
 </head>
 <body>
-  <div class="wrap">
-    <!-- Header -->
-    <header>
-      <div class="brand">
-        <div class="logo">OD</div>
-        <div>
-          <h1>OneDev</h1>
-          <p>Innovation Beyond Code</p>
-        </div>
-      </div>
+  <header id="header"></header>
+  <aside id="sidebar"></aside>
 
-      <nav class="nav-desktop">
-        <a href="#" class="btn ghost">Home</a>
-        <a href="#karir" class="btn ghost">Karir</a>
-        <a href="#tentang" class="btn ghost">Tentang</a>
-        <button class="btn">Apply Now</button>
-      </nav>
-
-      <!-- Mobile menu button -->
-      <button class="menu-btn" id="menuBtn">☰</button>
-    </header>
-
-    <!-- Sidebar Navigation -->
-    <aside class="sidebar" id="sidebar">
-      <button class="close-sidebar" id="closeSidebar">×</button>
-      <nav>
-        <a href="#">Home</a>
-        <a href="#karir">Karir</a>
-        <a href="#tentang">Tentang</a>
-        <a href="#" class="apply-now">Apply Now</a>
-      </nav>
-    </aside>
-
-    <!-- Hero Section -->
-    <section class="hero">
-      <div class="hero-card">
-        <h2>Bergabunglah dengan OneDev</h2>
-        <p>Tempat di mana ide besar dan inovasi teknologi bertemu untuk menciptakan masa depan digital.</p>
-
-        <div class="stats">
-          <div class="stat">
-            <strong>120+</strong>
-            <span>Developer Aktif</span>
-          </div>
-          <div class="stat">
-            <strong>35+</strong>
-            <span>Project Global</span>
-          </div>
-          <div class="stat">
-            <strong>15</strong>
-            <span>Negara Klien</span>
-          </div>
-        </div>
-      </div>
-
-      <div class="card cta-apply" id="karir">
-        <h3>Posisi Terbuka</h3>
-        <div class="jobs">
-          <div class="job">
-            <div class="meta">
-              <span class="role">Frontend Developer</span>
-              <div class="tags">
-                <span class="tag">React</span>
-                <span class="tag">Remote</span>
-              </div>
-            </div>
-            <button class="btn btn-apply">Apply</button>
-          </div>
-
-          <div class="job">
-            <div class="meta">
-              <span class="role">Backend Engineer</span>
-              <div class="tags">
-                <span class="tag">Node.js</span>
-                <span class="tag">Full-time</span>
-              </div>
-            </div>
-            <button class="btn btn-apply">Apply</button>
-          </div>
-
-          <div class="job">
-            <div class="meta">
-              <span class="role">UI/UX Designer</span>
-              <div class="tags">
-                <span class="tag">Figma</span>
-                <span class="tag">Hybrid</span>
-              </div>
-            </div>
-            <button class="btn btn-apply">Apply</button>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- Footer otomatis -->
-    <footer>
-      <p>© 2025 <strong>OneDev</strong>. All rights reserved.</p>
-      <p>
-        Designed & Developed by 
-        <a href="https://onedevofficial.vercel.app" target="_blank" class="footer-link">
-          OneDev Team
-        </a>
-      </p>
-    </footer>
-  </div>
-
-  <!-- Modal Form -->
-  <div class="overlay">
-    <div class="modal">
-      <h3>Formulir Lamaran Kerja</h3>
-      <form>
-        <div class="form-row">
-          <div class="field">
-            <label>Nama Lengkap</label>
-            <input type="text" name="name" placeholder="Nama Anda" required />
-          </div>
-          <div class="field">
-            <label>Email</label>
-            <input type="email" name="email" placeholder="email@contoh.com" required />
-          </div>
-        </div>
-        <div class="form-row">
-          <div class="field">
-            <label>Posisi</label>
-            <select name="role" required>
-              <option value="">Pilih posisi</option>
-              <option value="Frontend Developer">Frontend Developer</option>
-              <option value="Backend Engineer">Backend Engineer</option>
-              <option value="UI/UX Designer">UI/UX Designer</option>
-            </select>
-          </div>
-        </div>
-        <div class="field">
-          <label>Pesan atau Deskripsi Singkat</label>
-          <textarea name="message" placeholder="Ceritakan sedikit tentang diri Anda..." required></textarea>
-        </div>
-        <div class="form-row">
-          <button type="submit" class="btn">Kirim Lamaran</button>
-          <button type="button" class="btn ghost btn-close">Batal</button>
-        </div>
-      </form>
+  <main class="hero">
+    <div class="hero-content">
+      <h1>Karier di OneDev</h1>
+      <p>Bergabunglah dengan tim inovatif kami untuk membangun masa depan digital dunia.</p>
+      <a href="karir.html" class="btn">Lihat Lowongan</a>
     </div>
-  </div>
+  </main>
+
+  <footer id="footer"></footer>
 
   <script src="script.js"></script>
 </body>
