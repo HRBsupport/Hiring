@@ -1,21 +1,25 @@
-const socket = io("http://localhost:3000");
+async function loadGroup() {
+  try {
+    const res = await fetch("/api/group");
+    const data = await res.json();
 
-// UPDATE DATA GROUP
-socket.on("groupData", (data) => {
-  document.getElementById("groupName").innerText = data.name;
-  document.getElementById("memberCount").innerText = data.members.length;
+    document.getElementById("groupName").innerText = data.name;
+    document.getElementById("memberCount").innerText = data.members.length;
 
-  const list = document.getElementById("memberList");
-  list.innerHTML = "";
+    const list = document.getElementById("memberList");
+    list.innerHTML = "";
 
-  data.members.forEach((user) => {
-    const li = document.createElement("li");
-    li.innerText = user;
-    list.appendChild(li);
-  });
-});
+    data.members.forEach(user => {
+      const li = document.createElement("li");
+      li.innerText = user;
+      list.appendChild(li);
+    });
 
-// ONLINE COUNT (FAKE / REAL)
-socket.on("onlineCount", (count) => {
-  document.getElementById("onlineCount").innerText = count;
-});
+  } catch (err) {
+    console.log("Error:", err);
+  }
+}
+
+// polling tiap 5 detik
+setInterval(loadGroup, 5000);
+loadGroup();
