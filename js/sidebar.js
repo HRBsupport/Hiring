@@ -1,13 +1,18 @@
-const sidebarHTML = `
-  <div class="sidebar" id="side">
-    <h2>⚔️ Shinigami</h2>
-    <a href="/index.html">🏠 Home</a>
-    <a href="/pages/dashboard.html">📊 Dashboard</a>
-  </div>
-`;
+document.addEventListener("DOMContentLoaded", () => {
 
-document.getElementById('sidebar').innerHTML = sidebarHTML;
+  document.getElementById("sidebar").innerHTML = `
+    <div class="sidebar" id="side">
+      <h2>⚔️ Shinigami</h2>
+      <a href="/index.html">🏠 Home</a>
+      <a href="/pages/dashboard.html">📊 Dashboard</a>
+    </div>
+  `;
 
-function toggleSidebar() {
-  document.getElementById('side').classList.toggle('active');
-}
+  const side = document.getElementById("side");
+  const btn = document.getElementById("menuBtn");
+
+  btn.addEventListener("click", () => {
+    side.classList.toggle("active");
+  });
+
+});
