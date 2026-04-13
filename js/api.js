@@ -1,4 +1,4 @@
-const API = "https://backend-kamu.up.railway.app";
+const API = "https://Shinigami.up.railway.app";
 
 // STATUS BOT
 async function checkStatus() {
