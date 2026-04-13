@@ -1,27 +1,12 @@
 const API = "https://backend-kamu.up.railway.app";
 
-// KIRIM PESAN
-async function sendMessage() {
-  const target = document.getElementById("target").value;
-  const message = document.getElementById("message").value;
+// STATUS BOT
+async function checkStatus() {
+  const res = await fetch(API + "/status");
+  const data = await res.json();
 
-  if (!target || !message) {
-    alert("Isi data dulu!");
-    return;
-  }
-
-  await fetch(API + "/send-message", {
-    method: "POST",
-    headers: {
-      "Content-Type": "application/json"
-    },
-    body: JSON.stringify({
-      to: target,
-      text: message
-    })
-  });
-
-  alert("Pesan terkirim 🚀");
+  const el = document.getElementById("botStatus");
+  if (el) el.innerText = data.status.toUpperCase();
 }
 
 // LOAD GROUP
@@ -46,3 +31,7 @@ async function loadGroups() {
     container.appendChild(div);
   });
 }
+
+// AUTO LOAD
+checkStatus();
+loadGroups();
