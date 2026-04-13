@@ -10,15 +10,14 @@ body {
 /* BUTTON */
 .menu-btn {
   position: fixed;
-  top: 20px;
-  right: 20px; /* pindah ke kanan */
-  background: rgba(0,255,247,0.9);
-  border: none;
-  padding: 10px 14px;
-  cursor: pointer;
+  top: 15px;
+  right: 15px;
+  background: transparent;
+  color: #00fff7;
+  border: 1px solid #00fff7;
+  padding: 8px 12px;
+  font-size: 18px;
   z-index: 1001;
-  border-radius: 6px;
-  box-shadow: 0 0 10px #00fff7;
 }
 
 /* SIDEBAR */
