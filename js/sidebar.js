@@ -5,6 +5,7 @@ document.addEventListener("DOMContentLoaded", () => {
       <h2>⚔️ Shinigami</h2>
       <a href="/index.html">🏠 Home</a>
       <a href="/pages/dashboard.html">📊 Dashboard</a>
+      <a href="/pages/group.html">👥 Group</a>
     </div>
   `;
 
