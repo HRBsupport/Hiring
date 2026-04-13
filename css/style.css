@@ -171,49 +171,4 @@ body {
 .dashboard, .hud {
   flex: 1;
 }
-/* FORM INPUT */
-input, textarea {
-  width: 100%;
-  padding: 12px;
-  margin-top: 10px;
-  background: rgba(0,0,0,0.7);
-  border: 1px solid #00fff7;
-  color: #00fff7;
-  border-radius: 5px;
-  outline: none;
-  font-family: 'Orbitron', sans-serif;
-  box-shadow: 0 0 10px rgba(0,255,247,0.3);
-}
-
-/* TEXTAREA HEIGHT */
-textarea {
-  min-height: 100px;
-  resize: none;
-}
-
-/* BUTTON */
-button {
-  margin-top: 15px;
-  padding: 10px;
-  width: 100%;
-  background: #00fff7;
-  border: none;
-  color: #000;
-  font-weight: bold;
-  cursor: pointer;
-  border-radius: 5px;
-  box-shadow: 0 0 10px #00fff7;
-  transition: 0.3s;
-}
-
-button:hover {
-  background: #00cccc;
-  box-shadow: 0 0 20px #00fff7;
-}
-
-/* CARD FORM KHUSUS */
-.card {
-  max-width: 500px;
-  margin: auto;
-}
 }
