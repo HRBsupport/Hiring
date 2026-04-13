@@ -2,7 +2,7 @@
 <html lang="id">
 <head>
   <meta charset="UTF-8">
-  <title>Group WhatsApp</title>
+  <title>Group</title>
   <link rel="stylesheet" href="../css/style.css">
 </head>
 <body>
@@ -11,42 +11,18 @@
 <button class="menu-btn" id="menuBtn">☰</button>
 
 <div class="dashboard">
+  <h1 class="title">👥 GROUP WHATSAPP</h1>
 
-  <h1 class="title">👥 WHATSAPP GROUP</h1>
-
-  <div class="grid">
-
-    <div class="card">
-      <h3>📛 Group Name</h3>
-      <p id="groupName">Loading...</p>
-    </div>
-
-    <div class="card">
-      <h3>👤 Members</h3>
-      <p id="memberCount">0</p>
-    </div>
-
-    <div class="card">
-      <h3>🟢 Online</h3>
-      <p id="onlineCount">0</p>
-    </div>
-
-  </div>
-
-  <h2 style="margin-top:30px;">📜 Member List</h2>
-
-  <div class="card">
-    <ul id="memberList"></ul>
-  </div>
-
+  <div id="groupContainer" class="grid"></div>
 </div>
 
-<script src="../js/sidebar.js"></script>
-<script src="https://cdn.socket.io/4.5.4/socket.io.min.js"></script>
-<script src="../js/group.js"></script>
-</body>
+<footer class="footer">© Chastedragon</footer>
 
-<footer class="footer">
-  <p>©2025<a href="https://chastedragon.vercel.app">Chastedragon</a></p>
-</footer>
+<script src="../js/sidebar.js"></script>
+<script src="../js/api.js"></script>
+<script>
+  loadGroups();
+</script>
+
+</body>
 </html>
