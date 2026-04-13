@@ -123,4 +123,32 @@ body {
   .speed-box h1 {
     font-size: 40px;
   }
+
+/* GROUP CARD */
+.group-card {
+  text-align: center;
+  transition: 0.3s;
+}
+
+.group-card:hover {
+  transform: scale(1.05);
+  box-shadow: 0 0 25px #00fff7;
+}
+
+/* JOIN BUTTON */
+.join-btn {
+  margin-top: 15px;
+  padding: 10px 20px;
+  background: #00fff7;
+  border: none;
+  color: #000;
+  cursor: pointer;
+  border-radius: 5px;
+  font-weight: bold;
+  box-shadow: 0 0 10px #00fff7;
+}
+
+.join-btn:hover {
+  background: #00cccc;
+}
 }
