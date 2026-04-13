@@ -151,4 +151,19 @@ body {
 .join-btn:hover {
   background: #00cccc;
 }
+.footer {
+  position: fixed;
+  bottom: 10px;
+  left: 50%;
+  transform: translateX(-50%);
+  font-size: 12px;
+  color: #00fff7;
+  text-shadow: 0 0 10px #00fff7;
+  animation: flicker 2s infinite;
+}
+
+@keyframes flicker {
+  0%, 100% { opacity: 0.7; }
+  50% { opacity: 1; }
+}
 }
