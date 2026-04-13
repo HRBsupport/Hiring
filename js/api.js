@@ -9,6 +9,19 @@ async function checkStatus() {
   if (el) el.innerText = data.status.toUpperCase();
 }
 
+
+await fetch(API + "/send-message", {
+  method: "POST",
+  headers: {
+    "Content-Type": "application/json",
+    "x-api-key": "shinigami123"
+  },
+  body: JSON.stringify({
+    to: number,
+    text: message
+  })
+});
+
 // LOAD GROUP
 async function loadGroups() {
   const res = await fetch(API + "/groups");
