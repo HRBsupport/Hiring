@@ -3,23 +3,17 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Shinigami Cyberpunk</title>
+  <title>Shinigami HUD</title>
   <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
 
 <div id="sidebar"></div>
+<button class="menu-btn" id="menuBtn">☰</button>
 
-  <button class="menu-btn" onclick="toggleSidebar()">☰</button>
+<div class="hud">
 
-
-  <main class="content">
-    <h1 class="glow">⚔️ SHINIGAMI SYSTEM</h1>
-    <p class="subtitle">Cyberpunk Automation Interface</p>
-
-    <div class="hud">
-
-  <div class="panel status">
+  <div class="panel">
     <h3>ENGINE</h3>
     <p class="active">ACTIVE</p>
 
@@ -32,7 +26,7 @@
     <span>KM/H</span>
   </div>
 
-  <div class="panel status">
+  <div class="panel">
     <h3>AI SYSTEM</h3>
     <p class="active">ONLINE</p>
 
@@ -41,6 +35,8 @@
   </div>
 
 </div>
-  <script src="js/sidebar.js"></script>
+
+<script src="js/sidebar.js"></script>
+<script src="js/hud.js"></script>
 </body>
 </html>
